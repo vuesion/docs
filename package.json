@@ -1,0 +1,30 @@
+{
+  "name": "@vuesion/docs",
+  "version": "1.0.0",
+  "description": "Documentation of the @vuesion project",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuesion/docs.git"
+  },
+  "keywords": [
+    "vuesion",
+    "vuepress",
+    "vue-starter"
+  ],
+  "author": "Johannes Werner <johannes.werner86@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuesion/docs/issues"
+  },
+  "homepage": "https://github.com/vuesion/docs#readme",
+  "devDependencies": {
+    "gh-pages": "2.0.1",
+    "vuepress": "0.14.11"
+  }
+}
