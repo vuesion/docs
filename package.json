@@ -25,6 +25,6 @@
   "homepage": "https://github.com/vuesion/docs#readme",
   "devDependencies": {
     "gh-pages": "2.0.1",
-    "vuepress": "0.14.11"
+    "vuepress": "^1.0.0"
   }
 }
