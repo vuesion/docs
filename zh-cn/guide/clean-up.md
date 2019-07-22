@@ -4,6 +4,10 @@
 
 我们建议你删除这些代码,因为你的用例与演示用例完全不同.
 
+::: warning WARNING
+This will break the demo application and modules that might be generated during the guide.
+:::
+
 ## 文件夹和文件
 
 我们建议删除的文件和文件夹:

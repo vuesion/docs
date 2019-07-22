@@ -4,6 +4,10 @@ At this point, your project contains a lot of code that is just for demo purpose
 
 We recommend that you delete this code because your use-cases will be completely different from the demo use-cases.
 
+::: warning WARNING
+This will break the demo application and modules that might be generated during the guide.
+:::
+
 ## Directories and Files
 
 Directories and files that we would recommend to delete:
