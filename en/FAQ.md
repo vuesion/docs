@@ -42,4 +42,4 @@ Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
 - First if you have an instance of vuesion already running run `npm i -D @vuesion/service@3.0.2` inside of the project root directory.
   - Then run `npm run dev` that will fix the issue.
 - Secondly starting from scratch will be the next option with the updated services and dependencies, by running `npx @vuesion/create my-app --next` to create your new vuesion project. 
-  - Then run `npm run dev` to see if it works, run `npm run build -- --debug` if it doesn't work or gives an error.
+  - Then run `npm run dev` to see if it works, run `npm run build -- --debug` if it doesn't work or gives an error. If you want to see all details or alternatives you can visit [here](https://github.com/vuesion/vuesion/issues/423#issuecomment-520159263) to find other related issues.
