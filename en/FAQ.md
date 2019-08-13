@@ -32,3 +32,14 @@ Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
 
 - App Config
 - Runtime Config
+
+## The Dev Server keeps returning status code 500? 
+
+**Run through te following steps to fix the issue:**
+
+- Make sure your `node` *version* is above **8.16** optimal performance runs on **10.15.2** or latest *recommended* version. 
+- Make sure your `npm` *version* is above **6.9** optimal performance runs on **6.10.2**. 
+- First if you have an instance of vuesion already running run `npm i -D @vuesion/service@3.0.2` inside of the project root directory.
+  - Then run `npm run dev` to test and see if its works.
+- Secondly starting from scratch will be the next option with the updated services and dependencies, by running `npx @vuesion/create my-app --next` to create your new vuesion project. 
+  - Then run `npm run dev` to see if it works, run `npm run build -- --debug` if it doesn't work or gives an error.
