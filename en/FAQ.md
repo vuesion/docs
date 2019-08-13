@@ -40,6 +40,6 @@ Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
 - Make sure your `node` *version* is above **8.16** optimal performance runs on **10.15.2** or latest *recommended* version. 
 - Make sure your `npm` *version* is above **6.9** optimal performance runs on **6.10.2**. 
 - First if you have an instance of vuesion already running run `npm i -D @vuesion/service@3.0.2` inside of the project root directory.
-  - Then run `npm run dev` to test and see if its works.
+  - Then run `npm run dev` that will fix the issue.
 - Secondly starting from scratch will be the next option with the updated services and dependencies, by running `npx @vuesion/create my-app --next` to create your new vuesion project. 
   - Then run `npm run dev` to see if it works, run `npm run build -- --debug` if it doesn't work or gives an error.
