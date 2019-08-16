@@ -35,7 +35,7 @@ Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
 
 ## The Dev Server keeps returning status code 500? 
 
-**Run through te following steps to fix the issue:**
+**Run through the following steps to fix the issue:**
 
 - Make sure your `node` *version* is above **8.16** optimal performance runs on **10.15.2** or latest *recommended* version. 
 - Make sure your `npm` *version* is above **6.9** optimal performance runs on **6.10.2**. 
