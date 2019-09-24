@@ -58,7 +58,7 @@ or
 `CONFIG={\"API_KEY\":\"my-api-key\"} npm run dev`
 
 ::: warning DELETE CONFIDENTIAL DATA
-This API_KEY is confidential information, you should not expose it in your client application.
+This API_KEY is confidential information, you should not expose it to your client application.
 
 In order to remove this information from your initial state, you have to add the following line in
 `./src/server/isomorphic.ts`

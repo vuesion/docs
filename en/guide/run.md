@@ -62,4 +62,4 @@ info: node server started at http://localhost:3000
 
 Docker is available at port: 3001 so a developer can have both Docker and local server running at the same time
 
-Now that you know everything works as expected, to see `vuesion` in action, go to [http://localhost:3001](http://localhost:3001).
+Now that you know everything works as expected, see `vuesion` in action at [http://localhost:3001](http://localhost:3001).

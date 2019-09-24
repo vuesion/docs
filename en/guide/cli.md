@@ -78,7 +78,7 @@ For example `counter/MyNewComponent` will create a component inside the module `
 Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see the `Counter` example again (this is the default blueprint for modules).
 
 ::: tip Does everything work?
-To verify you didn't break something, run `npm test`.
+To verify that you didn't break something, run `npm test`.
 :::
 
 ## Configuration
