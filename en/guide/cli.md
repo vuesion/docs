@@ -8,17 +8,17 @@ A module is an encapsulated piece of domain logic in your application.
 
 ### Use-cases for a module
 
-**Dynamic page**: consists of a lot of view logic, at least one route and state-management
+**Dynamic page**: consists of a lot of view logic, at least one route and state management
 
-**Static page**: has no state-management but a route e.g. `/imprint`
+**Static page**: has no state management but a route e.g. `/imprint`
 
 **Domain logic with shared view components**: e.g. authentication state, actions, mutations plus login/signup forms but no routes
 
-**Domain logic**: just plain logic with state-management but no routes and no components
+**Domain logic**: just plain logic with state management but no routes and no components
 
 ## Create a module
 
-Let's create a page that is dynamic and has to have stage-management,
+Let's create a page that is dynamic and has stage management,
 run `npm run generate` and you will be asked some questions:
 
 ```bash
@@ -47,7 +47,7 @@ Type `Foo` and press `enter`
 ? Do you want vuex? Yes
 ```
 
-press two more times `enter` and you will see that the CLI generated a few files:
+press `enter` two more times and you will see that the CLI generated a few files:
 
 ```bash
 [SUCCESS] add /vuesion/src/app/foo/Foo/Foo.vue
@@ -78,7 +78,7 @@ For example `counter/MyNewComponent` will create a component inside the module `
 Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see the `Counter` example again (this is the default blueprint for modules).
 
 ::: tip Does everything work?
-To verify if you didn't break something, run `npm test`.
+To verify that you didn't break something, run `npm test`.
 :::
 
 ## Configuration

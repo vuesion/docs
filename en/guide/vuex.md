@@ -1,10 +1,10 @@
 # Persisting state
 
-By default, VueX keeps the state in memory. But the problem with keeping the state in memory is,
+By default, VueX keeps the state in memory. But the problem with keeping the state in memory is
 that the state is reset as soon as the user reloads the page.
 
-There are many ways to persist state if the user reloads the page,
-for example, you could keep variables in the query of the URL and restore the state if the page loads.
+There are many ways to persist state if the user reloads the page.
+For example, you could keep variables in the query of the URL and restore the state if the page loads.
 
 This approach is ok for a small amount of data that is not confidential, e.g. filters, sort directions, page number.
 

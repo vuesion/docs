@@ -20,15 +20,15 @@ observed for changes.
 
 [Please read the rules of reactivity.](https://vuex.vuejs.org/guide/mutations.html#mutations-follow-vue-s-reactivity-rules)
 
-## I don't need to build my own design-system, can I use vuesion with a 3rd party UI framework?
+## I don't need to build my own design system, can I use vuesion with a third-party UI framework?
 
 Yes, you can! [See this tutorial.](tutorials/third-party.md)
 
-## I don't need server-side-rendering, can I use vuesion to build a single-page-application?
+## I don't need server-side-rendering, can I use vuesion to build a single-page application?
 
 Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
 
-**The following features are not available in the single-page-application build:**
+**The following features are not available in the single-page application build:**
 
 - App Config
 - Runtime Config

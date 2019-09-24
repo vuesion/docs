@@ -21,14 +21,14 @@ Now you know that everything works as expected, to see the `vuesion` in action, 
 
 ## Development mode and hot reloading
 
-Your application runs now in development mode, that means that webpack watches for changes.
+Your application currently runs in development mode, which means that webpack watches for changes.
 
 Every file in the `./src` directory will be hot reloaded, so you don't have to reload your browser or restart the dev server during development.
 
-That guarantees a really good dev-experience and will make you much more productive.
+That guarantees a really good dev experience and will make you much more productive.
 
 ::: tip i18n
-the only files that are not hot-reloaded are the files in the `./i18n` directory, you have to reload your browser to reflect the changes.
+the only files that are not hot-reloaded are the files in the `./i18n` directory; you have to reload your browser to reflect the changes.
 :::
 
 ## Change web-server port
@@ -38,7 +38,7 @@ e.g. `npm run dev -- --port 8080` in development mode or `PORT=8080 npm start` f
 
 ## Run your application with docker
 
-The application can be served via docker too.
+The application can be served via Docker too.
 
 In order to build the image run:
 
@@ -48,7 +48,7 @@ In order to build the image run:
 npm run ci && docker build -t "vue/starter:latest" .
 ```
 
-When building is complete, you can proceed with firing up the docker container:
+When building is complete, you can proceed with firing up the Docker container:
 
 ```bash
 docker run -it --name vuesion -p 3001:3000 vue/starter:latest
@@ -60,6 +60,6 @@ You have to wait for the message:
 info: node server started at http://localhost:3000
 ```
 
-Docker is available at port: 3001 so a developer can have both docker and local server running at the same time
+Docker is available at port: 3001 so a developer can have both Docker and local server running at the same time
 
-Now you know that everything works as expected, to see the `vuesion` in action, go to [http://localhost:3001](http://localhost:3001).
+Now that you know everything works as expected, see `vuesion` in action at [http://localhost:3001](http://localhost:3001).

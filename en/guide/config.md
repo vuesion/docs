@@ -1,6 +1,6 @@
 # Config
 
-You will probably come into a situation where you have to change the behavior of our app depending on the
+You will probably come into a situation where you have to change the behavior of your app depending on the
 deployment stage _(e.g. you want to have a different API endpoint in development than in production)_.
 
 ## Different Environments

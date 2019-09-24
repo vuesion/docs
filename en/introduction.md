@@ -11,7 +11,7 @@ When starting the development of a new project, it's often tempting to start wit
 They provide solutions to already solved problems, so you can solve on the unique challenges of your application.
 
 But you know that this only works to a certain degree. In most projects you are working on, the number of phrases like
-**_"I can not change that because the library does not support it."_** increases over time.
+**_"I cannot change that because the library does not support it."_** increases over time.
 
 You've often been in situations where you had to write feature-requests, eject the webpack configuration in the first second of the project,
 or you have to create a local fork of the library to implement the requested features.

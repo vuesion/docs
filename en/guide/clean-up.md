@@ -27,7 +27,7 @@ Directories and files that we would recommend to delete:
 
 ## Code
 
-Now you have to remove references to this modules, remove the following code in the following files:
+Now you have to remove references to these modules. Remove the following code in the following files:
 
 `./src/app/router.ts`
 

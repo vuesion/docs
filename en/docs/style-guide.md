@@ -42,13 +42,13 @@ A module is an encapsulated piece of domain logic in your application, this coul
 
 #### Use-cases for a module
 
-**Dynamic page**: consists of a lot of view logic, at least one route and state-management
+**Dynamic page**: consists of a lot of view logic, at least one route and state management
 
-**Static page**: has no state-management but a route e.g. `/imprint`
+**Static page**: has no state management but a route e.g. `/imprint`
 
 **Domain logic with shared view components**: e.g. authentication state, actions, mutations plus login/signup forms but no routes
 
-**Domain logic**: just plain logic with state-management but no routes and no components
+**Domain logic**: just plain logic with state management but no routes and no components
 
 _A module usually has routing information, state management or both._
 
@@ -77,10 +77,9 @@ If you want to know how to archive this, have a look at [Container Components (i
 ## Naming Conventions
 
 Naming is one of the hardest things in software development.
-We can not support you with perfect names because we don't know your domain but we can help you to be consistent in naming files, modules, CSS classes, etc.
+We cannot support you with perfect names because we don't know your domain but we can help you to be consistent in naming files, modules, CSS classes, etc.
 
-Let's consider you create a new page (module) with state-management, routes and a component named `FooBar`,
-what would be the different variations for different contexts?
+Let's consider you create a new page (module) with state management, routes and a component named `FooBar`. What would be the different variations for different contexts?
 
 - module `fooBar`
 - route `fooBar`
@@ -93,6 +92,6 @@ what would be the different variations for different contexts?
 - default state `FooBarDefaultState`
 
 ::: tip Generator CLI
-If you want to save some time and to keep the style guide consistent,
-we recommended you to use the included **[Generator CLI](../guide/cli.md)** to generate new code.
+If you want to save some time and keep the style guide consistent,
+we recommended using the included **[Generator CLI](../guide/cli.md)** to generate new code.
 :::

@@ -33,9 +33,9 @@ This enables you to create, for example, a blog or a static marketing page
 ::: warning Limitations and Caveats
 
 - You need a web-server to serve the static files
-- You can not render pages that have route guards or a redirects (e.g. /dashboard)
+- You cannot render pages that have route guards or a redirects (e.g. /dashboard)
 - You might have issues with `prefetch` (e.g. if the server you try to hit is not available during the rendering)
-- You can not use the `App/Runtime Config` features because they depend on the server component
+- You cannot use the `App/Runtime Config` features because they depend on the server component
   - That means that you have to replace all references to the vuex state `app.config` with a static value
     :::
 
