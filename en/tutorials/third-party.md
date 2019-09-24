@@ -4,7 +4,7 @@
 
 ### Installation
 
-Before we start please install vuetify and material icons by running `npm install vuetify --save && npm install @mdi/font -D` and follow the [Clean-Up-Guide](/en/guide/clean-up.md).
+Before we start, please install vuetify and material icons by running `npm install vuetify --save && npm install @mdi/font -D` and follow the [Clean-Up-Guide](/en/guide/clean-up.md).
 
 ### Register vuetify
 
@@ -36,7 +36,7 @@ Vue.use(Vuetify);
 
 ### Implement basic vuetify layout
 
-To test if everything works - we get rid of everything in the file `./src/app/app/App/App.vue` and replace it with a basic vuetify layout:
+To test if everything works, we get rid of everything in the file `./src/app/app/App/App.vue` and replace it with a basic vuetify layout:
 
 ```js
 <template>
@@ -248,7 +248,7 @@ vue-components based on jQuery plugins use the window object and other browser f
 this does not play well together with server-side-rendering because on the
 server-side you don't have these features.
 
-In order to use this kind of 3rd party UI libraries we have to differentiate **when** we load these components and render them:
+In order to use these kinds of third-party UI libraries we have to differentiate **when** we load these components and render them:
 
 ```js
 const VJstree = CLIENT ? require('vue-jstree').default : null;

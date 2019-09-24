@@ -2,8 +2,8 @@
 
 # State transfer
 
-State transfer describes the process of providing data on the server side to the client side application.
-Vue.js provides this functionality out-of-the-box, it puts the initial state object for VueX in a global window variable
+State transfer describes the process of providing data on the server side to the client-side application.
+Vue.js provides this functionality out-of-the-box: it puts the initial state object for VueX in a global window variable
 called `__INITIAL_STATE__`.
 
 In the file `./src/app/store.ts` we use this window object to initialize our VueX store:
@@ -29,7 +29,7 @@ and provides the component as early as possible with data.
 In the context of server-side-rendering, this works a little bit different.
 
 To execute API calls on the server, we have to know about these calls.
-In order to to know about them, we need to make them static and find out which components that matches the current route
+In order to to know about them, we need to make them static and find out which components that match the current route
 have this function.
 
 If we have a look at the file `./src/server/isomorphic.ts`:
@@ -49,7 +49,7 @@ If we have a look at the file `./src/server/isomorphic.ts`:
 ...
 ```
 
-we see that the vuesion set-up expects us to call this static function `prefetch`.
+we see that the vuesion setup expects us to call this static function `prefetch`.
 
 This part of the code is
 responsible for getting all the `prefetch` functions from all the components that match the current route.

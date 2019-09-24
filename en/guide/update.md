@@ -14,7 +14,7 @@ The update script will compare your current copy of vuesion with the latest copy
 It will create, delete, add or modify all the files that are different.
 
 It is basically the same as if you would rebase your project on top of `vuesion/vuesion:master`.
-But usually, you did not keep the history of vuesion in your own app so it is not possible to rebase.
+But usually, it is not possible to rebase since you do not keep the history of vuesion in your own app.
 
 ## Merge with your local changes
 
@@ -26,8 +26,8 @@ Now you see the changes in your changelog:
 
 If everything works, commit your changes and merge it into your master.
 
-If not you might want to update manually by comparing your local copy with the [CHANGELOG](https://github.com/vuesion/vuesion/blob/master/CHANGELOG.md).
+If not, you might want to update manually by comparing your local copy with the [CHANGELOG](https://github.com/vuesion/vuesion/blob/master/CHANGELOG.md).
 
 ## Major version upgrades
 
-Our vision is to provide upgrade scripts for every major version, they will update the files and code.
+Our vision is to provide upgrade scripts for every major version, which will update the files and code.
