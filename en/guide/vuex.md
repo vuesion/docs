@@ -93,8 +93,9 @@ so you should consider just saving necessary data.
 Vuesion includes a LocalStorage adapter for the VueX-persist middleware.
 
 ::: tip LocalStorage
-LocalStorage works well for saving mid-sized data, but be aware that it is only available on the **client**.
-That means that data you save to it will not be rendered on the server. The DOM will always differ in this case.
+LocalStorage works well for saving mid-sized data, but be aware that it is only available on the **client-side**.
+That means that data you save to it will not be rendered on the server.
+The DOM will always differ in this case and the page will be re-rendered immediately.
 :::
 
 It is already referenced in the file `./src/app/store.ts`.

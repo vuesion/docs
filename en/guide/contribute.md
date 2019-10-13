@@ -11,6 +11,6 @@ If you like this project and you want to help to make it even better, please con
 
 - You can come up with new ideas or with bug reports and file an [issue](https://github.com/vuesion/vuesion/issues/new)
 
-- Or you can improve the docs
+- Or you can improve the [docs](https://github.com/vuesion/docs)
 
 Thank you for using vuesion! :smile:

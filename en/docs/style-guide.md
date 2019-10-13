@@ -8,7 +8,6 @@ and the [Angular Style Guide](https://angular.io/guide/styleguide).
 ```
 ├── .vuesion              // vuesion configuration
 ├── cypress                   // e2e tests
-├── docs                      // can be deleted
 ├── i18n                      // language files used by vue-i18n
 ├── logs                      // express logs
 └── src

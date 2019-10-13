@@ -3,7 +3,7 @@
 Vuesion includes [VueRouter](https://router.vuejs.org/) to support navigating between pages.
 
 ::: tip Server-side routing vs. client-side routing
-In isomorphic apps it is important to keep in mind that routing works differently if we are handling an initial page load,
+In isomorphic (universal) apps it is important to keep in mind that routing works differently if we are handling an initial page load,
 which is handled on the server side, or if we are changing the URL later and transition between views on the client side.
 
 A redirect on the server side usually means responding with HTTP status code 301 or 302 and instead of rendering a page,

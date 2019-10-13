@@ -23,13 +23,13 @@ run `npm run generate` and you will be asked some questions:
 
 ```bash
 ? [PLOP] Please choose a generator. (Use arrow keys)
-  component - Add a single file component
-❯ module - Add a module with VueX store and routes
-  connected - Add a VueX connected component
-
+  Simple Component - Add a single file component 
+  Connected Component - Add a VueX connected component 
+❯ Empty Module - Add a module with VueX store and routes 
+  CRUD Module - Add a module with CRUD operations (POST, GET, PUT, DELETE) 
 ```
 
-choose `module` and continue with `enter`:
+choose `Empty Module` and continue with `enter`:
 
 ```bash
 ? [PLOP] Please choose a generator. module - Add a module with vuex store and routes
@@ -63,7 +63,8 @@ press `enter` two more times and you will see that the CLI generated a few files
 [SUCCESS] add /vuesion/src/app/foo/state.ts
 ```
 
-You will also see that the CLI already referenced the new files in the necessary places: `./src/app/router.ts`, `./src/app/state.ts` and `./src/app/store.ts`.
+You will also see that the CLI already referenced the new files in the necessary places: 
+`./src/app/router.ts`, `./src/app/state.ts` and `./src/app/store.ts`.
 
 ::: tip Name can include path
 The name of a `module`, `connected` or `component` can be prefixed with a path.
@@ -75,7 +76,7 @@ For example `counter/MyNewComponent` will create a component inside the module `
 
 ## Verification
 
-Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see the `Counter` example again (this is the default blueprint for modules).
+Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see a new Page.
 
 ::: tip Does everything work?
 To verify that you didn't break something, run `npm test`.

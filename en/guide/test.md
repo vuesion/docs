@@ -14,10 +14,11 @@ All files     |      100 |      100 |      100 |      100 |                   |
 
 ...
 
-Test Suites: 55 passed, 55 total
-Tests:       184 passed, 184 total
+Test Suites: 72 passed, 72 total
+Tests:       264 passed, 264 total
 Snapshots:   0 total
-Time:        4.605s
+Time:        5.308s, estimated 12s
+Ran all test suites.
 
 Process finished with exit code 0
 ```

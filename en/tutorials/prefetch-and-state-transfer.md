@@ -2,7 +2,7 @@
 
 # State transfer
 
-State transfer describes the process of providing data on the server side to the client-side application.
+State transfer describes the process of providing data on the server-side to the client-side application.
 Vue.js provides this functionality out-of-the-box: it puts the initial state object for VueX in a global window variable
 called `__INITIAL_STATE__`.
 
@@ -21,7 +21,7 @@ the same work in the browser again.
 
 This is really important if we fetch data from a remote API - **we don't want to do this twice per page!**
 
-# How to fetch data from a remote API on the server side?
+# How to fetch data from a remote API on the server-side?
 
 Usually we fetch data in the `created` or `mounted` function of a component this works well in the browser
 and provides the component as early as possible with data.

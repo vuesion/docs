@@ -4,21 +4,14 @@ At this point, your project contains a lot of code that is just for demo purpose
 
 We recommend that you delete this code because your use-cases will be completely different from the demo use-cases.
 
-::: warning WARNING
-This will break the demo application and modules that might be generated during the guide.
-:::
-
 ## Directories and Files
 
 Directories and files that we would recommend to delete:
 
 ```bash
-├── docs
 └── src
     ├── app
-    │   ├── counter
-    │   ├── dashboard
-    │   └── form
+    │   └── example
     └── server
         └── routes
             ├── CounterRoutes.ts
@@ -32,9 +25,9 @@ Now you have to remove references to these modules. Remove the following code in
 `./src/app/router.ts`
 
 ```js
-import { CounterRoutes }    from './counter/routes';
-import { FormRoutes } from './form/routes';
-import { DashboardRoutes } from './dashboard/routes';
+import { CounterRoutes } from './example/counter/routes';
+import { FormRoutes } from './example/form/routes';
+import { DashboardRoutes } from './example/dashboard/routes';
 
 ...
 
@@ -48,7 +41,7 @@ import { DashboardRoutes } from './dashboard/routes';
 `./src/app/state.ts`
 
 ```js
-import { CounterDefaultState, ICounterState } from './counter/state';
+import { ICounterState } from './example/counter/state';
 
 ...
 

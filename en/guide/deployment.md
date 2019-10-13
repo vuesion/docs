@@ -1,11 +1,11 @@
 # Deployment
 
-## Isomorphic Web Application
+## Isomorphic (Universal) Web Application
 
 For a better user experience and search engine optimisation we recommend this method for your deployment.
-This project is optimised to produce isomorphic web-apps. All features are available for this kind of deployment.
+This project is optimised to produce isomorphic (universal) web-apps. All features are available for this kind of deployment.
 
-To create an isomorphic web-app that you can deploy to an Heroku dyno, AWS EC2 instance or any other managed server,
+To create an isomorphic (universal) web-app that you can deploy to an Heroku dyno, AWS EC2 instance or any other managed server,
 run the command `npm run build`. This will create a server application that serves and renders the app.
 
 **Folders and files to include in your deployments:**
@@ -37,7 +37,8 @@ This enables you to create, for example, a blog or a static marketing page
 - You might have issues with `prefetch` (e.g. if the server you try to hit is not available during the rendering)
 - You cannot use the `App/Runtime Config` features because they depend on the server component
   - That means that you have to replace all references to the vuex state `app.config` with a static value
-    :::
+
+:::
 
 **Folders and files to include in your deployments:**
 

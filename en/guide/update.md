@@ -30,4 +30,4 @@ If not, you might want to update manually by comparing your local copy with the 
 
 ## Major version upgrades
 
-Our vision is to provide upgrade scripts for every major version, which will update the files and code.
+Our vision is to provide upgrade scripts for every major version, which will update the files and code in the future.

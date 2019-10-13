@@ -6,18 +6,14 @@ In order to test if everything works as expected run the following command: `npm
 You should see a message in your console that says:
 
 ```bash
-[1] info: server started at http://localhost:3000
+info: server started at http://localhost:3000
 ```
 
 That means that the dev-server successfully started.
 
-You have to wait for a second message that indicates that the client and the isomorphic code is successfully compiled:
+After another couple of seconds `vuesion` will open the url [http://localhost:3000](http://localhost:3000) in your default browser.
 
-```bash
-[1] ℹ ｢wdm｣: Compiled successfully.
-```
-
-Now you know that everything works as expected, to see the `vuesion` in action, go to [http://localhost:3000](http://localhost:3000).
+You have to wait for a second message that indicates that the client and the isomorphic (universal) code is successfully compiled:
 
 ## Development mode and hot reloading
 
