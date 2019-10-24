@@ -142,7 +142,7 @@ module.exports = {
             {
               title: 'Tutorials',
               collapsable: false,
-              children: ['tutorials/redirects', 'tutorials/prefetch-and-state-transfer', 'tutorials/third-party'],
+              children: ['tutorials/redirects', 'tutorials/prefetch-and-state-transfer', 'tutorials/third-party', 'tutorials/deploy-with-firebase'],
             },
             {
               title: 'Docs',
