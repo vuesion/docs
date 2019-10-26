@@ -43,3 +43,20 @@ Yes, [here is the tutorial!](guide/deployment.md#static-single-page-application)
   - Then run `npm run dev` that will fix the issue.
 - Secondly starting from scratch will be the next option with the updated services and dependencies, by running `npx @vuesion/create my-app --next` to create your new vuesion project. 
   - Then run `npm run dev` to see if it works, run `npm run build -- --debug` if it doesn't work or gives an error. If you want to see all details or alternatives you can visit [here](https://github.com/vuesion/vuesion/issues/423#issuecomment-520159263) to find other related issues.
+
+## I get the message `warn: unsupported route: /client/[hash].hot-update.json; error: {"code":404}` during development
+
+Sometimes, you get this message because you have an instance of vuesion running in the browser and you restarted the dev-server.
+In this case, you reload the browser tab and the hot-module-reloading is again connected to the dev-server.
+
+
+::: tip 
+If hot-module-reloading works, you can ignore this messages. It only shows that the logging on the server-side works
+:::
+
+::: danger
+If your app doesn't reload, even after refreshing the browser tab and restarting the dev-server.
+Then you probably ran the app in production mode at some point on `localhost:3000` and a service-worker was installed.
+
+**Please uninstall the service-worker and refresh the browser tab.**
+:::
