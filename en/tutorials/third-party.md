@@ -70,7 +70,7 @@ To test if everything works, we get rid of everything in the file `./src/app/app
                 </v-list-item-content>
               </v-list-item>
             </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" @click="">
+            <v-list-item v-for="(child, i) in item.children" :key="i">
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
@@ -81,7 +81,7 @@ To test if everything works, we get rid of everything in the file `./src/app/app
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-          <v-list-item v-else :key="item.text" @click="">
+          <v-list-item v-else :key="item.text">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -107,7 +107,7 @@ To test if everything works, we get rid of everything in the file `./src/app/app
         prepend-inner-icon="search"
         label="Search"
         class="hidden-sm-and-down"
-      ></v-text-field>
+      />
       <div class="flex-grow-1"></div>
       <v-btn icon>
         <v-icon>mdi-apps</v-icon>
@@ -117,8 +117,8 @@ To test if everything works, we get rid of everything in the file `./src/app/app
       </v-btn>
       <v-btn icon large>
         <v-avatar size="32px" item>
-          <v-img src="https://cdn.vuetifyjs.com/images/logos/logo.svg" alt="Vuetify"> </v-img
-        ></v-avatar>
+          <v-img src="https://cdn.vuetifyjs.com/images/logos/logo.svg" alt="Vuetify" />
+        </v-avatar>
       </v-btn>
     </v-app-bar>
     <v-content>
@@ -140,6 +140,8 @@ To test if everything works, we get rid of everything in the file `./src/app/app
             </template>
             <span>Codepen</span>
           </v-tooltip>
+
+          <vue-badge color="primary">Vuesion Component</vue-badge>
         </v-row>
       </v-container>
     </v-content>
@@ -193,8 +195,20 @@ To test if everything works, we get rid of everything in the file `./src/app/app
 import '../../../../node_modules/@mdi/font/css/materialdesignicons.css';
 import '../../../../node_modules/vuetify/dist/vuetify.css';
 import '../../shared/designSystem/global.scss';
+import VueBadge from '@components/VueBadge/VueBadge.vue';
 
 export default {
+  name: 'App',
+  components: { VueBadge },
+  metaInfo: {
+    title: 'App',
+  },
+  props: {
+    source: {
+      type: String,
+      default: '',
+    },
+  },
   data: (): any => ({
     dialog: false,
     drawer: null,
@@ -229,9 +243,6 @@ export default {
       { icon: 'keyboard', text: 'Go to the old version' },
     ],
   }),
-  props: {
-    source: String,
-  },
 };
 </script>
 
