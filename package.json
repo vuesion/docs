@@ -14,8 +14,7 @@
   },
   "keywords": [
     "vuesion",
-    "vuepress",
-    "vue-starter"
+    "vuepress"
   ],
   "author": "Johannes Werner <johannes.werner86@gmail.com>",
   "license": "MIT",
@@ -25,6 +24,6 @@
   "homepage": "https://github.com/vuesion/docs#readme",
   "devDependencies": {
     "gh-pages": "2.1.1",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.8.2"
   }
 }

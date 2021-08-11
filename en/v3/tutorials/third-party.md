@@ -4,7 +4,7 @@
 
 ### Installation
 
-Before we start, please install vuetify and material icons by running `npm install vuetify --save && npm install @mdi/font -D` and follow the [Clean-Up-Guide](/en/guide/clean-up.md).
+Before we start, please install vuetify and material icons by running `npm install vuetify --save && npm install @mdi/font -D` and follow the [Clean-Up-Guide](/en/v3/guideide/clean-up.md).
 
 ### Register vuetify
 

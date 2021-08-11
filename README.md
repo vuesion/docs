@@ -2,21 +2,24 @@
 
 > Documentation of the [vuesion project](https://github.com/vuesion/vuesion)
 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-# Contribute
 
-Contributions are always welcome! Please read the [contribution guidelines](https://github.com/vuesion/packages/blob/master/.github/CONTRIBUTING.md) first.
+# Links
+[v3 Docs](vuesion.github.io/docs/en/v3/)
+
+[v4 Docs](vuesion.github.io/docs/en/v4/)
 
 # Development
 
 - clone repo
 - run `npm install`
-
-## Development
-
 - run `npm run dev`
+- open [http://localhost:8080/docs/en/v4/](http://localhost:8080/docs/en/v4/)
+
+# Contribute
+
+Contributions are always welcome! Please read the [contribution guidelines](https://github.com/vuesion/vuesion/blob/master/.github/CONTRIBUTING.md) first.
+
 
 # License
-
-[MIT](http://opensource.org/licenses/MIT)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)

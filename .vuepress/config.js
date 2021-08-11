@@ -6,15 +6,9 @@ module.exports = {
   locales: {
     '/en/': {
       lang: 'en',
-      title: 'vuesion',
+      title: 'Vuesion',
       description:
-        'The most complete boilerplate for production-ready PWAs. With focus on performance, development speed, and best practices',
-    },
-    '/zh-cn/': {
-      lang: 'zh-CN',
-      title: 'vuesion',
-      description:
-        '一个灵活的、可扩展的、自定的，已经准备好用于生产的渐进式网络应用样板，聚焦于性能、开发速度和最佳实践',
+        'Vuesion is a boilerplate that helps product teams build faster than ever with fewer headaches and modern best practices across engineering & design.',
     },
   },
   head: [
@@ -36,7 +30,7 @@ module.exports = {
       'meta',
       {
         name: 'theme-color',
-        content: '#f43b6c',
+        content: '#0f3191',
       },
     ],
     [
@@ -65,7 +59,7 @@ module.exports = {
       {
         rel: 'mask-icon',
         href: '/icons/safari-pinned-tab.svg',
-        color: '#f43b6c',
+        color: '#0f3191',
       },
     ],
     [
@@ -79,34 +73,27 @@ module.exports = {
       'meta',
       {
         name: 'msapplication-TileColor',
-        content: '#f43b6c',
+        content: '#0f3191',
       },
     ],
   ],
   serviceWorker: true,
   themeConfig: {
-    repo: 'vuesion/docs',
+    repo: 'vuesion/vuesion',
+    docsRepo: 'vuesion/docs',
     editLinks: true,
+    smoothScroll: true,
     locales: {
       '/en/': {
         label: 'English',
-        selectText: '中文',
         editLinkText: 'Edit this page on GitHub',
         nav: [
-          {
-            text: 'FAQ',
-            link: '/en/FAQ',
-          },
-          {
-            text: 'Guide',
-            link: '/en/introduction',
-          },
           {
             text: 'Interactive Demo',
             link: 'https://vuesion.herokuapp.com/',
           },
           {
-            text: 'Components',
+            text: 'Design System',
             link: 'https://vuesion.herokuapp.com/storybook',
           },
           {
@@ -114,12 +101,46 @@ module.exports = {
             link: 'https://discord.gg/59x5cg2',
           },
           {
-            text: 'Slack',
-            link: 'https://slack-vuesion.herokuapp.com/',
-          },
+            text: 'Versions',
+            items: [
+              { text: 'v3', link: '/en/v3/' },
+              { text: 'v4', link: '/en/v4/' }
+            ]
+          }
         ],
         sidebar: {
-          '/en/': [
+          '/en/v3/': [
+            {
+              title: 'Getting started',
+              collapsable: false,
+              children: [
+                'FAQ',
+                'guide/install',
+                'guide/run',
+                'guide/test',
+                'guide/i18n',
+                'guide/cli',
+                'guide/clean-up',
+                'guide/vuex',
+                'guide/build',
+                'guide/config',
+                'guide/contribute',
+                'guide/update',
+                'guide/deployment',
+              ],
+            },
+            {
+              title: 'Tutorials',
+              collapsable: false,
+              children: ['tutorials/redirects', 'tutorials/prefetch-and-state-transfer', 'tutorials/third-party', 'tutorials/deploy-with-firebase'],
+            },
+            {
+              title: 'Docs',
+              collapsable: false,
+              children: ['docs/style-guide', 'docs/pwa', 'docs/npm-scripts'],
+            },
+          ],
+          '/en/v4/': [
             {
               title: 'Getting started',
               collapsable: false,
@@ -151,60 +172,7 @@ module.exports = {
             },
           ],
         },
-      },
-      '/zh-cn/': {
-        label: '简体中文',
-        selectText: 'English',
-        editLinkText: '在GitHub上编辑这页',
-        nav: [
-          {
-            text: '指南',
-            link: '/zh-cn/introduction',
-          },
-          {
-            text: '交互演示',
-            link: 'https://vuesion.herokuapp.com/',
-          },
-          {
-            text: '组件',
-            link: 'https://vuesion.herokuapp.com/storybook',
-          },
-          {
-            text: 'Discord',
-            link: 'https://discord.gg/59x5cg2',
-          },
-          {
-            text: '交流',
-            link: 'https://slack-vuesion.herokuapp.com/',
-          },
-        ],
-        sidebar: {
-          '/zh-cn/': [
-            {
-              title: '开始',
-              collapsable: false,
-              children: [
-                'guide/install',
-                'guide/run',
-                'guide/test',
-                'guide/i18n',
-                'guide/cli',
-                'guide/clean-up',
-                'guide/vuex',
-                'guide/build',
-                'guide/config',
-                'guide/contribute',
-                'guide/update',
-              ],
-            },
-            {
-              title: '文档',
-              collapsable: false,
-              children: ['docs/style-guide', 'docs/npm-scripts', 'docs/i18n', 'docs/storybook', 'docs/redirects'],
-            },
-          ],
-        },
-      },
+      }
     },
   },
 };
