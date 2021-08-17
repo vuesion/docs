@@ -25,32 +25,22 @@ This means you can connect to protected APIs on the server to render the initial
 with the correct data.
 :::
 
-The CookieStorage adapter is already referenced in the file `./src/app/store.ts`.
+The CookieStorage adapter is already referenced in the file `./src/plugins/vuex-persist/vuex-persist.client.ts`.
 
 ```js
-import { PersistCookieStorage } from '@vuesion/addon-vuex-persist/dist/PersistCookieStorage';
+import { Context } from '@nuxt/types';
+import { VuexPersist } from '@vuesion/vuex-persist/dist/vuex-persist';
+import { PersistCookieStorage } from '@vuesion/vuex-persist/dist/PersistCookieStorage';
 
-...
-
-const beforePersistCookieStorage = (localState: IState): IState => {
-  delete localState.app.config;
-  delete localState.app.defaultMessages;
-  delete localState.app.redirectTo;
-
-  return localState;
-};
-
-...
-
-          new PersistCookieStorage(
-            ['app'],
-            {
-              cookieOptions: {
+export default ({ store }: Context) => {
+    VuexPersist([
+        new PersistCookieStorage(['counter'], {
+            cookieOptions: {
                 expires: 365,
-              },
-              beforePersist: beforePersistCookieStorage,
             },
-          ),
+        }),
+    ])(store);
+};
 ```
 
 To persist your state to a cookie, you have to initialize a
@@ -63,24 +53,16 @@ and a callback to delete state that should not be persisted to the cookie.
 
 ### Extracting cookie state on the server
 
-The following part of `/src/server/isomorphic.ts` is responsible for extracting the cookie data and merging it into the initial state of the app.
+The following file `./src/plugins/vuex-persist/vuex-persist.server.ts` is responsible for extracting 
+the cookie data and merging it into the initial state of the app.
 
 ```js
-/**
- * default state
- */
-let state: IState = store.state;
-state = PersistCookieStorage.getMergedStateFromServerContext < IState > (context, state);
-state.app.config = context.appConfig;
+export default ({ store, req }: Context) => {
+    const cookies = req && req.headers.cookie ? require('cookie').parse(req.headers.cookie) : {};
+    const state = PersistCookieStorage.getMergedStateFromServerContext<any>(cookies, store.state);
 
-if (state.app && state.app.locale) {
-  context.acceptLanguage = state.app.locale;
-  context.htmlLang = state.app.locale.substr(0, 2);
-} else {
-  state.app.locale = context.acceptLanguage;
-}
-
-store.replaceState(state);
+    store.replaceState(state);
+};
 ```
 
 ::: warning Cookie size
@@ -98,23 +80,32 @@ That means that data you save to it will not be rendered on the server.
 The DOM will always differ in this case and the page will be re-rendered immediately.
 :::
 
-It is already referenced in the file `./src/app/store.ts`.
+Here is an example how to use the LocalStorage adapter:
+
+`./src/plugins/vuex-persist/vuex-persist.client.ts`.
 
 ```js
-import { PersistLocalStorage } from '@vuesion/addon-vuex-persist/dist/PersistLocalStorage';
+import { Context } from '@nuxt/types';
+import { VuexPersist } from '@vuesion/vuex-persist/dist/vuex-persist';
+import { PersistCookieStorage } from '@vuesion/vuex-persist/dist/PersistCookieStorage';
+import { PersistLocalStorage } from '@vuesion/vuex-persist/dist/PersistLocalStorage';
+import { IState } from '@/interfaces/IState';
 
-...
+export default ({ store }: Context) => {
+    VuexPersist([
+        new PersistCookieStorage(['counter'], {
+            cookieOptions: {
+                expires: 365,
+            },
+        }),
+        new PersistLocalStorage(['counter'], (state: IState) => {
+            delete state.counter.incrementPending;
+            delete state.counter.decrementPending;
 
-const beforePersistLocalStorage = (localState: IState): IState => {
-  delete localState.counter.incrementPending;
-  delete localState.counter.decrementPending;
-
-  return localState;
+            return state;
+        }),
+    ])(store);
 };
-
-...
-
-new PersistLocalStorage(['counter'], beforePersistLocalStorage),
 ```
 
 To persist your state to LocalStorage, you have to initialize a

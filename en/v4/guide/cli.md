@@ -1,80 +1,58 @@
 # Create a new Page
 
-To create a new page, you have to add a new module to your application.
-
-## What is a module?
-
-A module is an encapsulated piece of domain logic in your application.
-
-### Use-cases for a module
-
-**Dynamic page**: consists of a lot of view logic, at least one route and state management
-
-**Static page**: has no state management but a route e.g. `/imprint`
-
-**Domain logic with shared view components**: e.g. authentication state, actions, mutations plus login/signup forms but no routes
-
-**Domain logic**: just plain logic with state management but no routes and no components
-
-## Create a module
-
-Let's create a page that is dynamic and has stage management,
-run `npm run generate` and you will be asked some questions:
+Let's create a page, you will be asked some questions:
 
 ```bash
-? [PLOP] Please choose a generator. (Use arrow keys)
+> vuesion generate
+
+? [PLOP] Please choose a generator. 
   Simple Component - Add a single file component 
-  Connected Component - Add a VueX connected component 
-❯ Empty Module - Add a module with VueX store and routes 
-  CRUD Module - Add a module with CRUD operations (POST, GET, PUT, DELETE) 
+❯ Page - Add a new page 
+  Vuex Module - Add a new page 
+  Interface - Add a new interface and fixtures 
 ```
 
-choose `Empty Module` and continue with `enter`:
+choose `Page` and continue with `enter`:
 
 ```bash
-? [PLOP] Please choose a generator. module - Add a module with vuex store and routes
-? What should it be called?
+> vuesion generate
+
+? [PLOP] Please choose a generator. Page - Add a new page
+? What should it be called? 
 ```
 
-This will be the name of your module, connected component and route.
+This will be the name of your route and page component.
+
+::: tip Name can include path
+All generators can be prefixed with a path. Also page names are always in singular form, for example `users/_id`
+will turn into `user/_id`.
+:::
 
 Type `Foo` and press `enter`
 
 ```bash
-? [PLOP] Please choose a generator. module - Add a module with vuex store and routes
+> vuesion generate
+
+? [PLOP] Please choose a generator. Page - Add a new page
 ? What should it be called? Foo
-? Do you want routes? Yes
-? Do you want vuex? Yes
+✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.vue
+✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.spec.ts
 ```
+`
 
-press `enter` two more times and you will see that the CLI generated a few files:
-
-```bash
-[SUCCESS] add /vuesion/src/app/foo/Foo/Foo.vue
-[SUCCESS] add /vuesion/src/app/foo/Foo/Foo.spec.ts
-[SUCCESS] add /vuesion/src/app/foo/routes.ts
-[SUCCESS] add /vuesion/src/app/foo/actions.spec.ts
-[SUCCESS] add /vuesion/src/app/foo/actions.ts
-[SUCCESS] add /vuesion/src/app/foo/getters.spec.ts
-[SUCCESS] add /vuesion/src/app/foo/getters.ts
-[SUCCESS] add /vuesion/src/app/foo/module.ts
-[SUCCESS] add /vuesion/src/app/foo/mutations.spec.ts
-[SUCCESS] add /vuesion/src/app/foo/mutations.ts
-[SUCCESS] add /vuesion/src/app/foo/state.ts
-```
-
-You will also see that the CLI already referenced the new files in the necessary places: 
-`./src/app/router.ts`, `./src/app/state.ts` and `./src/app/store.ts`.
-
-::: tip Name can include path
-The name of a `module`, `connected` or `component` can be prefixed with a path.
-
-For example `counter/MyNewComponent` will create a component inside the module `counter`.
-
-**A `connected` component for example has to be prefixed with a path because it only can live inside a module.**
-:::
+Your page has been created at `./src/pages/foo.vue`. The generator also added a test file `./src/pages/foo.spec.ts`.
 
 ## Verification
+
+Open the file `./src/pages/foo.vue` and disable the authentication middleware for this page
+
+```js
+...
+export default defineComponent({
+  name: 'FooPage',
+  auth: false,
+...
+```
 
 Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see a new Page.
 
@@ -84,13 +62,12 @@ To verify that you didn't break something, run `npm test`.
 
 ## Configuration
 
-To change the paths for the generator CLI, see the following section in the file: `./.vuesion/config.json`
+To change the paths for the generator CLI, see the following section in the file: `./.Vuesion/config.json`
 
 ```js
   "generators": {
     "blueprintDirectory": "./.vuesion/generators",
-    "outputDirectory": "./src/app",
-    "routerFile": "./src/app/router.ts",
-    "stateFile": "./src/app/state.ts"
+    "outputDirectory": "./src",
+    "stateFile": "./src/interfaces/IState.ts"
   },
 ```

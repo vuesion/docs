@@ -3,16 +3,18 @@
 | Script                | Description                                                       |
 | --------------------- | ----------------------------------------------------------------- |
 | dev                   | Run application in development mode and server component          |
-| generate              | Add new component, connected components or modules to the project |
-| add                   | Add official vuesion packages to the project                      |
-| extract-i18n-messages | Extract default i18n message from source code                     |
+| storybook:dev         | Run Storybook in development mode                                 |
 | test                  | Run unit tests with jest                                          |
+| generate              | Add new component, Page, vuex-module or interface  to the project |
+| type-gen:gql          | Generate TypeScript types from your GraphQL queries and mutations |
+| type-gen:swagger      | Generate TypeScript types from a swagger.json file                |
+| extract-i18n-messages | Extract default i18n message from source code                     |
+| test:watch            | Run unit tests with jest in watch mode                            |
 | e2e                   | Run e2e tests with cypress.io                                     |
 | lint                  | Lint project files                                                |
 | clean                 | Clean up project files                                            |
-| storybook:dev         | Run Storybook in development mode                                 |
 | storybook:build       | Generate static files from Storybook                              |
-| update                | Update the project to the latest vuesion version                  |
+| update                | Update the project to the latest Vuesion version                  |
 | prettier              | Format project files with prettier                                |
 | release:major         | Release a new major version of the project                        |
 | release:minor         | Release a new minor version of the project                        |

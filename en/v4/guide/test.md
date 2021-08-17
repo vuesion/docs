@@ -7,17 +7,17 @@ To check if all the features, components, services, etc. work as intended, you s
 You will see something like this:
 
 ```bash
---------------|----------|----------|----------|----------|-------------------|
-File          |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
---------------|----------|----------|----------|----------|-------------------|
-All files     |      100 |      100 |      100 |      100 |                   |
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |     100 |     100 |   
 
 ...
 
-Test Suites: 72 passed, 72 total
-Tests:       264 passed, 264 total
+Test Suites: 63 passed, 63 total
+Tests:       255 passed, 255 total
 Snapshots:   0 total
-Time:        5.308s, estimated 12s
+Time:        9.633 s
 Ran all test suites.
 
 Process finished with exit code 0
@@ -32,7 +32,7 @@ That guarantees that the code you are going to commit will not break the applica
 ::: tip Jest config
 By default, the coverage threshold is set to `100`%.
 
-If you think this is just too much for your project, configure the appropriate thresholds in the `./package.json`.
+If you think this is just too much for your project, configure the appropriate thresholds in the `./jest.config.js`.
 
 ```json
     "coverageThreshold": {
