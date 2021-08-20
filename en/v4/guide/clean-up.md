@@ -2,7 +2,7 @@
 
 At this point, your project contains code that is just for demo purposes.
 
-We show you which files you safely delete if you don't need any of the demo features.
+We show you which files you can safely delete if you don't need any of the demo features.
 
 ## Directories and Files
 
@@ -18,7 +18,7 @@ Directories and files that we would recommended to delete:
         └── counter
 ```
 
-If you don't want to use the GraphQL set up you have to remove the following directories and files:
+If you don't want to use the GraphQL set up you can also remove the following directories and files:
 
 ```bash
 └── src
@@ -29,7 +29,7 @@ If you don't want to use the GraphQL set up you have to remove the following dir
 
 ## Code
 
-Now you have to remove references to these modules. Remove the following code in the following files:
+Now you can remove the references to these files:
 
 `./src/interfaces/IState.ts`
 
@@ -43,8 +43,6 @@ export interface IState {
     counter: ICounterState; // remove
 }
 ```
-
-And the api routes:
 
 `./src/api/index.ts`
 
@@ -65,7 +63,7 @@ DemoRoutes(app); // remove
 ...
 ```
 
-If you don't want to use the GraphQL set up you also have to remove the following references:
+If you don't want to use the GraphQL set up you can also remove the following references:
 
 `./nuxt.config.ts`
 
@@ -106,7 +104,7 @@ export default config;
 
 `./package.json`
 
-```js
+```json
 {
   ...
   "scripts": {
@@ -140,10 +138,10 @@ export default config;
 
 ## Verification
 
-Now you have a clean app and you can start creating your own application.
+Now you have a clean code-base, and you can start creating your product.
 
 You should still see the Vuesion home page if you open up [http://localhost:3000](http://localhost:3000).
-But other routes should redirect to the `/not-found` page.
+But other routes should redirect to the `404` page.
 
 ::: tip Does it still work?
 To verify that your changes did not break something, run `npm test`.

@@ -1,3 +1,8 @@
+---
+prev: ./introduction
+next: ./guide/install
+---
+
 # FAQ
 
 ## Why are my properties not reactive?

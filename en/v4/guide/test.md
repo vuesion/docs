@@ -2,7 +2,7 @@
 
 Your app is installed and runs in development mode but does every component in the app work correctly?
 
-To check if all the features, components, services, etc. work as intended, you should run the tests suite with `npm run test`.
+To check if all the features, components, services, etc. work as intended, you should run the test suite with `npm run test`.
 
 You will see something like this:
 
@@ -27,14 +27,14 @@ It shows that you have an application that is well tested and from now on
 you should get feedback if you accidentally break included features when you run the tests.
 
 The `npm test` command will be executed in the before-commit hook.
-That guarantees that the code you are going to commit will not break the application.
+That will guarantee that the code you are going to commit will not break the application.
 
 ::: tip Jest config
 By default, the coverage threshold is set to `100`%.
 
 If you think this is just too much for your project, configure the appropriate thresholds in the `./jest.config.js`.
 
-```json
+```js
     "coverageThreshold": {
       "global": {
         "branches": 100,

@@ -1,7 +1,6 @@
 # Run the application
 
-Of course, you want to know if the application that you just downloaded works.
-In order to test if everything works as expected run the following command: `npm run dev`.
+To test if everything works as expected run the following command: `npm run dev`.
 
 It will open [http://localhost:3000](http://localhost:3000) and show you the Nuxt.js loading screen.
 
@@ -14,7 +13,13 @@ Every file in the `./src` directory will be hot reloaded, so you don't have to r
 That guarantees a good dev experience and will make you much more productive.
 
 ::: tip i18n
-the only files that are not hot-reloaded are the files in the `./i18n` directory; you have to reload your browser to reflect the changes.
+The only files that are not hot-reloaded are the files in the `./i18n` directory; you have to reload your browser to reflect the changes.
+:::
+
+::: tip Storybook
+We recommend to use Storybook for component development. It's way quicker with displaying updates for component styling.
+
+You can start Storybook by running `npm run storybook:dev`
 :::
 
 ## Change web-server port
@@ -58,4 +63,4 @@ You have to wait for the message:
 
 Docker is available at port: 3001 so a developer can have both Docker and local server running at the same time
 
-Now that you know everything works as expected, see `Vuesion` in action at [http://localhost:3001](http://localhost:3001).
+Now that you know everything works as expected, see Vuesion in action at [http://localhost:3001](http://localhost:3001).

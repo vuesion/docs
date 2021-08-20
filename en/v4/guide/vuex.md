@@ -1,27 +1,27 @@
 # Persisting state
 
-By default, VueX keeps the state in memory. But the problem with keeping the state in memory is
+By default, Vuex keeps the state in memory. But the problem with keeping the state in memory is
 that the state is reset as soon as the user reloads the page.
 
 There are many ways to persist state if the user reloads the page.
 For example, you could keep variables in the query of the URL and restore the state if the page loads.
 
-This approach is ok for a small amount of data that is not confidential, e.g. filters, sort directions, page number.
+This approach is ok for a small amount of data that is not confidential, e.g. filters, sort directions, page number, etc.
 
 But sometimes you have to store confidential data like access tokens or big data objects like a list of products.
 In these cases, you need to store your data in cookies or LocalStorage.
 
-Vuesion comes with a VueX middleware that allows you to decide to persist VueX modules in different storages.
+Vuesion comes with a Vuex middleware that allows you to persist Vuex modules in different storages.
 
 ## Persist to cookies
 
-Vuesion includes a CookieStorage adapter for the VueX-persist middleware.
+Vuesion includes a CookieStorage adapter for the Vuex-persist middleware.
 
 ::: tip Cookies
 **Before you apply this tip, have a talk with a security engineer!**
 
 Cookies are good for keeping access tokens. Cookies are available on the server too.
-This means you can connect to protected APIs on the server to render the initial page for the user
+This means you can connect to protected APIs on the server to render the initial page
 with the correct data.
 :::
 
@@ -34,7 +34,7 @@ import { PersistCookieStorage } from '@vuesion/vuex-persist/dist/PersistCookieSt
 
 export default ({ store }: Context) => {
     VuexPersist([
-        new PersistCookieStorage(['counter'], {
+        new PersistCookieStorage(['counter' /*, other modules */], {
             cookieOptions: {
                 expires: 365,
             },
@@ -54,7 +54,7 @@ and a callback to delete state that should not be persisted to the cookie.
 ### Extracting cookie state on the server
 
 The following file `./src/plugins/vuex-persist/vuex-persist.server.ts` is responsible for extracting 
-the cookie data and merging it into the initial state of the app.
+the cookie state and merging it into the initial state of the app.
 
 ```js
 export default ({ store, req }: Context) => {
@@ -72,7 +72,7 @@ so you should consider just saving necessary data.
 
 ## Persist to LocalStorage
 
-Vuesion includes a LocalStorage adapter for the VueX-persist middleware.
+Vuesion includes a LocalStorage adapter for the Vuex-persist middleware.
 
 ::: tip LocalStorage
 LocalStorage works well for saving mid-sized data, but be aware that it is only available on the **client-side**.
@@ -93,12 +93,12 @@ import { IState } from '@/interfaces/IState';
 
 export default ({ store }: Context) => {
     VuexPersist([
-        new PersistCookieStorage(['counter'], {
+        new PersistCookieStorage(['counter' /*, other modules */], {
             cookieOptions: {
                 expires: 365,
             },
         }),
-        new PersistLocalStorage(['counter'], (state: IState) => {
+        new PersistLocalStorage(['counter' /*, other modules */], (state: IState) => {
             delete state.counter.incrementPending;
             delete state.counter.decrementPending;
 

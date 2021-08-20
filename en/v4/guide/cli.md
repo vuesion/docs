@@ -1,6 +1,6 @@
 # Create a new Page
 
-Let's create a page, you will be asked some questions:
+Let's create a new page with the interactive Vuesion generator CLI. Running `npm run generate` will prompt you some questions.
 
 ```bash
 > vuesion generate
@@ -12,7 +12,7 @@ Let's create a page, you will be asked some questions:
   Interface - Add a new interface and fixtures 
 ```
 
-choose `Page` and continue with `enter`:
+Choose `Page` and continue with `enter`:
 
 ```bash
 > vuesion generate
@@ -21,14 +21,14 @@ choose `Page` and continue with `enter`:
 ? What should it be called? 
 ```
 
-This will be the name of your route and page component.
+Now enter the name of your route and page component.
 
-::: tip Name can include path
-All generators can be prefixed with a path. Also page names are always in singular form, for example `users/_id`
+::: tip Name can include path information
+All generators can be prefixed with a path. Page names are always in singular form, for example `users/_id`
 will turn into `user/_id`.
 :::
 
-Type `Foo` and press `enter`
+Type `Foo` and continue with `enter`
 
 ```bash
 > vuesion generate
@@ -38,7 +38,6 @@ Type `Foo` and press `enter`
 ✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.vue
 ✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.spec.ts
 ```
-`
 
 Your page has been created at `./src/pages/foo.vue`. The generator also added a test file `./src/pages/foo.spec.ts`.
 
@@ -54,7 +53,7 @@ export default defineComponent({
 ...
 ```
 
-Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you should see a new Page.
+Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you will see the new page.
 
 ::: tip Does everything work?
 To verify that you didn't break something, run `npm test`.
@@ -62,12 +61,12 @@ To verify that you didn't break something, run `npm test`.
 
 ## Configuration
 
-To change the paths for the generator CLI, see the following section in the file: `./.Vuesion/config.json`
+To change the paths for the Vuesion generator CLI, see the `generators` section in the file: `./.vuesion/config.json`
 
 ```js
   "generators": {
-    "blueprintDirectory": "./.vuesion/generators",
-    "outputDirectory": "./src",
-    "stateFile": "./src/interfaces/IState.ts"
+    "blueprintDirectory": "./.vuesion/generators", // handlebar templates
+    "outputDirectory": "./src", // source directory
+    "stateFile": "./src/interfaces/IState.ts" // interface file for vuex-modules
   },
 ```

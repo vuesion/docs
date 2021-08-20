@@ -153,6 +153,15 @@ module.exports = {
                         },
                     ],
                     '/en/v4/': [
+
+                        {
+                            title: 'General',
+                            collapsable: false,
+                            children: [
+                                'introduction',
+                                'FAQ'
+                            ],
+                        },
                         {
                             title: 'Getting started',
                             collapsable: false,
@@ -169,7 +178,6 @@ module.exports = {
                                 'guide/update',
                                 ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
                                 'guide/npm-scripts',
-                                'FAQ',
                             ],
                         },
                     ],
