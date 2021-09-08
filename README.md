@@ -18,7 +18,7 @@
 
 # Contribute
 
-Contributions are always welcome! Please read the [contribution guidelines](https://github.com/vuesion/vuesion/blob/master/.github/CONTRIBUTING.md) first.
+Contributions are always welcome! Please read the [contribution guidelines](https://github.com/vuesion/vuesion/blob/master/CONTRIBUTING.md) first.
 
 
 # License
