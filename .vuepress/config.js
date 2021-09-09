@@ -10,6 +10,13 @@ module.exports = {
             description:
                 'Vuesion is a boilerplate that helps product teams build faster than ever with fewer headaches and modern best practices across engineering & design.',
         },
+      '/ru/': {
+        lang: 'ru-Ru',
+        title: 'Vuesion',
+        description:
+          'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
+      },
+
     },
     head: [
         ['script', {}, `(function customScript() {
@@ -182,7 +189,61 @@ module.exports = {
                         },
                     ],
                 },
-            }
+            },
+            '/ru/': {
+                label: 'Русский',
+                editLinkText: 'Редактировать эту страницу на GitHub',
+                nav: [
+                    {
+                      text: 'Интерактивное Демо',
+                      link: 'https://vuesion.herokuapp.com/',
+                    },
+                    {
+                      text: 'Дизайн-система',
+                      link: 'https://vuesion.herokuapp.com/storybook',
+                    },
+                    {
+                      text: 'Discord',
+                      link: 'https://discord.gg/59x5cg2',
+                    },
+                    {
+                      text: 'Версии',
+                      items: [
+                        {text: 'v4', link: '/en/v4/'}
+                      ]
+                    }
+                ],
+                sidebar: {
+                    '/ru/v4/': [
+                        {
+                            title: 'General',
+                            collapsable: false,
+                            children: [
+                              'introduction',
+                              'FAQ'
+                            ],
+                        },
+                        {
+                            title: 'Начало работы',
+                            collapsable: false,
+                            children: [
+                                'guide/install',
+                                'guide/run',
+                                'guide/test',
+                                'guide/i18n',
+                                'guide/cli',
+                                'guide/clean-up',
+                                'guide/vuex',
+                                'guide/build',
+                                'guide/contribute',
+                                'guide/update',
+                                ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
+                                'guide/npm-scripts',
+                            ],
+                        },
+                    ],
+                },
+              }
         },
     },
 };
