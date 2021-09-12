@@ -10,12 +10,12 @@ module.exports = {
             description:
                 'Vuesion is a boilerplate that helps product teams build faster than ever with fewer headaches and modern best practices across engineering & design.',
         },
-      '/ru/': {
-        lang: 'ru-Ru',
-        title: 'Vuesion',
-        description:
-          'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
-      },
+        '/ru/': {
+            lang: 'ru-Ru',
+            title: 'Vuesion',
+            description:
+                'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
+        },
 
     },
     head: [
@@ -195,22 +195,22 @@ module.exports = {
                 editLinkText: 'Редактировать эту страницу на GitHub',
                 nav: [
                     {
-                      text: 'Интерактивное Демо',
-                      link: 'https://vuesion.herokuapp.com/',
+                        text: 'Интерактивное Демо',
+                        link: 'https://vuesion.herokuapp.com/',
                     },
                     {
-                      text: 'Дизайн-система',
-                      link: 'https://vuesion.herokuapp.com/storybook',
+                        text: 'Дизайн-система',
+                        link: 'https://vuesion.herokuapp.com/storybook',
                     },
                     {
-                      text: 'Discord',
-                      link: 'https://discord.gg/59x5cg2',
+                        text: 'Discord',
+                        link: 'https://discord.gg/59x5cg2',
                     },
                     {
-                      text: 'Версии',
-                      items: [
-                        {text: 'v4', link: '/en/v4/'}
-                      ]
+                        text: 'Версии',
+                        items: [
+                            {text: 'v4', link: '/en/v4/'}
+                        ]
                     }
                 ],
                 sidebar: {
@@ -219,8 +219,8 @@ module.exports = {
                             title: 'General',
                             collapsable: false,
                             children: [
-                              'introduction',
-                              'FAQ'
+                                'introduction',
+                                'FAQ'
                             ],
                         },
                         {
@@ -243,7 +243,7 @@ module.exports = {
                         },
                     ],
                 },
-              }
+            }
         },
     },
 };
