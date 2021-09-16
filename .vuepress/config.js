@@ -10,13 +10,18 @@ module.exports = {
             description:
                 'Vuesion is a boilerplate that helps product teams build faster than ever with fewer headaches and modern best practices across engineering & design.',
         },
-      '/ru/': {
-        lang: 'ru-Ru',
-        title: 'Vuesion',
-        description:
-          'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
-      },
-
+        '/ru/': {
+            lang: 'ru-Ru',
+            title: 'Vuesion',
+            description:
+                'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
+        },
+        '/ko/': {
+            lang: 'ko',
+            title: 'Vuesion',
+            description:
+                'Vuesion은 설계 전반에 사용할 수 있는 최신 사례들을 활용하여, 팀이 고민거리 없이 신속하게 서비스를 구축할 수 있도록 돕는 VueJS 보일러 플레이트입니다.',
+        },
     },
     head: [
         ['script', {}, `(function customScript() {
@@ -195,22 +200,22 @@ module.exports = {
                 editLinkText: 'Редактировать эту страницу на GitHub',
                 nav: [
                     {
-                      text: 'Интерактивное Демо',
-                      link: 'https://vuesion.herokuapp.com/',
+                        text: 'Интерактивное Демо',
+                        link: 'https://vuesion.herokuapp.com/',
                     },
                     {
-                      text: 'Дизайн-система',
-                      link: 'https://vuesion.herokuapp.com/storybook',
+                        text: 'Дизайн-система',
+                        link: 'https://vuesion.herokuapp.com/storybook',
                     },
                     {
-                      text: 'Discord',
-                      link: 'https://discord.gg/59x5cg2',
+                        text: 'Discord',
+                        link: 'https://discord.gg/59x5cg2',
                     },
                     {
-                      text: 'Версии',
-                      items: [
-                        {text: 'v4', link: '/en/v4/'}
-                      ]
+                        text: 'Версии',
+                        items: [
+                            {text: 'v4', link: '/en/v4/'}
+                        ]
                     }
                 ],
                 sidebar: {
@@ -219,8 +224,8 @@ module.exports = {
                             title: 'General',
                             collapsable: false,
                             children: [
-                              'introduction',
-                              'FAQ'
+                                'introduction',
+                                'FAQ'
                             ],
                         },
                         {
@@ -243,7 +248,62 @@ module.exports = {
                         },
                     ],
                 },
-              }
+            },
+            '/ko/': {
+                label: '한국어',
+                editLinkText: 'GitHub에서 현재 페이지 수정하기',
+                nav: [
+                    {
+                        text: '인터렉티브 데모',
+                        link: 'https://vuesion.herokuapp.com/',
+                    },
+                    {
+                        text: '디자인 시스템',
+                        link: 'https://vuesion.herokuapp.com/storybook',
+                    },
+                    {
+                        text: '디스코드',
+                        link: 'https://discord.gg/59x5cg2',
+                    },
+                    {
+                        text: '버전',
+                        items: [
+                            {text: 'v3 (영문)', link: '/en/v3/'},
+                            {text: 'v4', link: '/ko/v4/'}
+                        ]
+                    }
+                ],
+                sidebar: {
+                    '/ko/v4/': [
+                        {
+                            title: '일반',
+                            collapsable: false,
+                            children: [
+                                'introduction',
+                                'FAQ'
+                            ],
+                        },
+                        {
+                            title: '시작하기',
+                            collapsable: false,
+                            children: [
+                                'guide/install',
+                                'guide/run',
+                                'guide/test',
+                                'guide/i18n',
+                                'guide/cli',
+                                'guide/clean-up',
+                                'guide/vuex',
+                                'guide/build',
+                                'guide/contribute',
+                                'guide/update',
+                                ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', '배포하기'],
+                                'guide/npm-scripts',
+                            ],
+                        },
+                    ],
+                },
+            }
         },
     },
 };
