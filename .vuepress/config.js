@@ -165,7 +165,6 @@ module.exports = {
                         },
                     ],
                     '/en/v4/': [
-
                         {
                             title: 'General',
                             collapsable: false,
@@ -186,6 +185,7 @@ module.exports = {
                                 'guide/clean-up',
                                 'guide/vuex',
                                 'guide/build',
+                                'guide/design-system',
                                 'guide/contribute',
                                 'guide/update',
                                 ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
