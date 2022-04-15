@@ -6,7 +6,7 @@ We show you which files you can safely delete if you don't need any of the demo 
 
 ## Directories and Files
 
-Directories and files that we would recommended to delete:
+Directories and files that we would recommend to delete:
 
 ```bash
 └── src
@@ -18,7 +18,9 @@ Directories and files that we would recommended to delete:
         └── counter
 ```
 
-If you don't want to use the GraphQL set up you can also remove the following directories and files:
+### Remove GraphQL
+
+If you don't want to use the GraphQL you can also remove the following directories and files:
 
 ```bash
 └── src
@@ -63,7 +65,9 @@ DemoRoutes(app); // remove
 ...
 ```
 
-If you don't want to use the GraphQL set up you can also remove the following references:
+### Remove GraphQL
+
+If you don't want to use the GraphQL you can also remove the following references:
 
 `./nuxt.config.ts`
 

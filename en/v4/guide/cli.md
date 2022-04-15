@@ -1,6 +1,13 @@
-# Create a new Page
+# Create your first page
 
-Let's create a new page with the interactive Vuesion generator CLI. Running `npm run generate` will prompt you some questions.
+Pages are special in Nuxt.js and their path and names will turn into your applications URLs.
+If you want to know more about Pages, please consult the 
+[Nuxt.js documentation about the Pages directory](https://nuxtjs.org/docs/directory-structure/pages/).
+
+## Use the Page generator
+
+Let's create a new page with the interactive Vuesion generator CLI. Running `npm run generate` will prompt you some
+questions.
 
 ```bash
 > vuesion generate
@@ -24,26 +31,26 @@ Choose `Page` and continue with `enter`:
 Now enter the name of your route and page component.
 
 ::: tip Name can include path information
-All generators can be prefixed with a path. Page names are always in singular form, for example `users/_id`
-will turn into `user/_id`.
+All generators can be prefixed with a path. Page names are always in singular form, for example `users/_id/index`
+will turn into `user/_id/index`.
 :::
 
-Type `Foo` and continue with `enter`
+Type `foo/index` and continue with `enter`
 
 ```bash
 > vuesion generate
 
 ? [PLOP] Please choose a generator. Page - Add a new page
 ? What should it be called? Foo
-✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.vue
-✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo.spec.ts
+✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo/index.vue
+✔  ++ /Users/johanneswerner/Projects/vuesion/vuesion/src/pages/foo/index.spec.ts
 ```
 
-Your page has been created at `./src/pages/foo.vue`. The generator also added a test file `./src/pages/foo.spec.ts`.
+Your page has been created at `./src/pages/foo/index.vue`. The generator also added a test
+file `./src/pages/foo/index.spec.ts`.
 
-## Verification
-
-Open the file `./src/pages/foo.vue` and disable the authentication middleware for this page
+Open the file `./src/pages/foo/index.vue` and disable the authentication middleware for this page and
+also give it an expressive component name.
 
 ```js
 ...
@@ -58,15 +65,3 @@ Go to [http://localhost:3000/foo](http://localhost:3000/foo) and you will see th
 ::: tip Does everything work?
 To verify that you didn't break something, run `npm test`.
 :::
-
-## Configuration
-
-To change the paths for the Vuesion generator CLI, see the `generators` section in the file: `./.vuesion/config.json`
-
-```js
-  "generators": {
-    "blueprintDirectory": "./.vuesion/generators", // handlebar templates
-    "outputDirectory": "./src", // source directory
-    "stateFile": "./src/interfaces/IState.ts" // interface file for vuex-modules
-  },
-```

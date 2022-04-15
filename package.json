@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/vuesion/docs#readme",
   "devDependencies": {
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.9.7"
   }
 }
