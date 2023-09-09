@@ -26,7 +26,7 @@ module.exports = {
     head: [
         ['script', {}, `(function customScript() {
             window.addEventListener('load', () => {
-              var version = window.location.pathname.includes('v4') ? 'v4' : 'v3';
+              var version = window.location.pathname.includes('v5') ? 'v5' : 'v4';
               var homeLink = document.querySelector('.home-link');
 
               if (homeLink) {
@@ -127,43 +127,12 @@ module.exports = {
                     {
                         text: 'Versions',
                         items: [
-                            {text: 'v3', link: '/en/v3/'},
-                            {text: 'v4', link: '/en/v4/'}
+                            {text: 'v4', link: '/en/v4/'},
+                            {text: 'v5', link: '/en/v5/'}
                         ]
                     }
                 ],
                 sidebar: {
-                    '/en/v3/': [
-                        {
-                            title: 'Getting started',
-                            collapsable: false,
-                            children: [
-                                'FAQ',
-                                'guide/install',
-                                'guide/run',
-                                'guide/test',
-                                'guide/i18n',
-                                'guide/cli',
-                                'guide/clean-up',
-                                'guide/vuex',
-                                'guide/build',
-                                'guide/config',
-                                'guide/contribute',
-                                'guide/update',
-                                'guide/deployment',
-                            ],
-                        },
-                        {
-                            title: 'Tutorials',
-                            collapsable: false,
-                            children: ['tutorials/redirects', 'tutorials/prefetch-and-state-transfer', 'tutorials/third-party', 'tutorials/deploy-with-firebase'],
-                        },
-                        {
-                            title: 'Docs',
-                            collapsable: false,
-                            children: ['docs/style-guide', 'docs/pwa', 'docs/npm-scripts'],
-                        },
-                    ],
                     '/en/v4/': [
                         {
                             title: 'General',
@@ -199,117 +168,43 @@ module.exports = {
                             ],
                         },
                     ],
-                },
-            },
-            '/ru/': {
-                label: 'Русский',
-                editLinkText: 'Редактировать эту страницу на GitHub',
-                nav: [
-                    {
-                        text: 'Интерактивное Демо',
-                        link: 'https://vuesion.herokuapp.com/',
-                    },
-                    {
-                        text: 'Дизайн-система',
-                        link: 'https://vuesion.herokuapp.com/storybook',
-                    },
-                    {
-                        text: 'Discord',
-                        link: 'https://discord.gg/59x5cg2',
-                    },
-                    {
-                        text: 'Версии',
-                        items: [
-                            {text: 'v4', link: '/en/v4/'}
-                        ]
-                    }
-                ],
-                sidebar: {
-                    '/ru/v4/': [
+                    '/en/v5/': [
                         {
                             title: 'General',
                             collapsable: false,
                             children: [
                                 'introduction',
-                                'FAQ'
+                                // 'FAQ'
                             ],
                         },
                         {
-                            title: 'Начало работы',
+                            title: 'Getting started',
                             collapsable: false,
                             children: [
                                 'guide/install',
-                                'guide/run',
-                                'guide/test',
-                                'guide/i18n',
-                                'guide/cli',
-                                'guide/clean-up',
-                                'guide/vuex',
-                                'guide/build',
-                                'guide/contribute',
-                                'guide/update',
-                                ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
-                                'guide/npm-scripts',
+                                // 'guide/run',
+                                // 'guide/test',
+                                // 'guide/cli',
+                                // 'guide/clean-up',
+                                // 'guide/contribute',
                             ],
                         },
+                        // {
+                        //     title: 'Deep dives',
+                        //     collapsable: false,
+                        //     children: [
+                        //         'deep_dives/build',
+                        //         'deep_dives/design-system',
+                        //         'deep_dives/i18n',
+                        //         ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
+                        //         'deep_dives/update',
+                        //         'deep_dives/npm-scripts',
+                        //         'deep_dives/vuex',
+                        //     ],
+                        // },
                     ],
                 },
             },
-            '/ko/': {
-                label: '한국어',
-                editLinkText: 'GitHub에서 현재 페이지 수정하기',
-                nav: [
-                    {
-                        text: '인터렉티브 데모',
-                        link: 'https://vuesion.herokuapp.com/',
-                    },
-                    {
-                        text: '디자인 시스템',
-                        link: 'https://vuesion.herokuapp.com/storybook',
-                    },
-                    {
-                        text: '디스코드',
-                        link: 'https://discord.gg/59x5cg2',
-                    },
-                    {
-                        text: '버전',
-                        items: [
-                            {text: 'v3 (영문)', link: '/en/v3/'},
-                            {text: 'v4', link: '/ko/v4/'}
-                        ]
-                    }
-                ],
-                sidebar: {
-                    '/ko/v4/': [
-                        {
-                            title: '일반',
-                            collapsable: false,
-                            children: [
-                                'introduction',
-                                'FAQ'
-                            ],
-                        },
-                        {
-                            title: '시작하기',
-                            collapsable: false,
-                            children: [
-                                'guide/install',
-                                'guide/run',
-                                'guide/test',
-                                'guide/i18n',
-                                'guide/cli',
-                                'guide/clean-up',
-                                'guide/vuex',
-                                'guide/build',
-                                'guide/contribute',
-                                'guide/update',
-                                ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', '배포하기'],
-                                'guide/npm-scripts',
-                            ],
-                        },
-                    ],
-                },
-            }
         },
     },
 };

@@ -5,16 +5,16 @@
 
 
 # Links
-[v3 Docs](https://vuesion.github.io/docs/en/v3/)
-
 [v4 Docs](https://vuesion.github.io/docs/en/v4/)
+
+[v5 Docs](https://vuesion.github.io/docs/en/v5/)
 
 # Development
 
 - clone repo
 - run `npm install`
 - run `npm run dev`
-- open [http://localhost:8080/docs/en/v4/](http://localhost:8080/docs/en/v4/)
+- open [http://localhost:8080/docs/en/v5/](http://localhost:8080/docs/en/v4/)
 
 # Contribute
 
