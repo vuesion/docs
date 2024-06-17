@@ -1,12 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800|Lora:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.bunny.net/css?family=Inter:400,600,900|Lora:400,600&display=swap');
 
 html, body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  background: #f1f3f5;
+  background: #ffffff;
+  color: #141518;
 }
 
-h1, h2, h3, h4, h5, h6 {
+img, div[class*="language-"] {
+  border-radius: 16px !important;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+}
+
+h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
@@ -15,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 56px !important;
   min-height: 56px !important;
   line-height: 1.5 !important;
-  background: #f1f3f5;
+  background: #ffffff;
 }
 
 .navbar .logo {
@@ -27,14 +37,41 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
   top: 56px;
-  background: #f1f3f5;
+  background: #ffffff;
 }
 
 .links, .search-box input {
-  background-color: #f1f3f5 !important;
+  background-color: #ffffff !important;
 }
 
 code {
-  background-color: #282c2e !important;
+  background-color: #272a31 !important;
   color: #fff !important;
+}
+
+blockquote, .description {
+    color: #4c535f !important;
+}
+
+.mermaid-diagram .node circle {
+  fill: #663CCB !important;
+  stroke: #663CCB !important;
+  stroke-width: 2px !important;
+}
+
+.mermaid-diagram .node .nodeLabel {
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.mermaid-diagram .edgeLabels {
+  transform: translateY(-10px);
+}
+.mermaid-diagram .edgeLabels > .edgeLabel span {
+  color: #3f444e !important;
+  background-color: transparent !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }

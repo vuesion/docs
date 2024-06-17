@@ -8,19 +8,7 @@ module.exports = {
             lang: 'en',
             title: 'Vuesion',
             description:
-                'Vuesion is a boilerplate that helps product teams build faster than ever with fewer headaches and modern best practices across engineering & design.',
-        },
-        '/ru/': {
-            lang: 'ru-Ru',
-            title: 'Vuesion',
-            description:
-                'Vuesion - стартовая сборка Vue JS для быстрого прототипирования с готовой архитектурой для больших приложений',
-        },
-        '/ko/': {
-            lang: 'ko',
-            title: 'Vuesion',
-            description:
-                'Vuesion은 설계 전반에 사용할 수 있는 최신 사례들을 활용하여, 팀이 고민거리 없이 신속하게 서비스를 구축할 수 있도록 돕는 VueJS 보일러 플레이트입니다.',
+                'Vuesion is a boilerplate that empowers product teams to build faster with modern best practices across engineering and design. It features a full-stack framework, comprehensive design system, robust testing, and seamless internationalization.',
         },
     },
     head: [
@@ -113,12 +101,12 @@ module.exports = {
                 editLinkText: 'Edit this page on GitHub',
                 nav: [
                     {
-                        text: 'Interactive Demo',
-                        link: 'https://vuesion.herokuapp.com/',
+                        text: 'Storybook',
+                        link: 'https://vuesion.herokuapp.com/storybook/',
                     },
                     {
-                        text: 'Design System',
-                        link: 'https://vuesion.herokuapp.com/storybook',
+                        text: 'Figma UIKit',
+                        link: 'https://www.figma.com/community/file/1080868611324978249',
                     },
                     {
                         text: 'Discord',
@@ -170,41 +158,30 @@ module.exports = {
                     ],
                     '/en/v5/': [
                         {
-                            title: 'General',
+                            title: 'Guide',
                             collapsable: false,
                             children: [
-                                'introduction',
-                                // 'FAQ'
+                                'guide/introduction',
+                                'guide/getting-started',
+                                'guide/concepts',
+                                'guide/development',
+                                'guide/design-system',
+                                'guide/community-and-support',
                             ],
                         },
                         {
-                            title: 'Getting started',
+                            title: 'Tutorials',
                             collapsable: false,
                             children: [
-                                'guide/install',
-                                // 'guide/run',
-                                // 'guide/test',
-                                // 'guide/cli',
-                                // 'guide/clean-up',
-                                // 'guide/contribute',
+                                'tutorials/layout-components',
+                                'tutorials/i18n',
+                                'tutorials/theming',
                             ],
                         },
-                        // {
-                        //     title: 'Deep dives',
-                        //     collapsable: false,
-                        //     children: [
-                        //         'deep_dives/build',
-                        //         'deep_dives/design-system',
-                        //         'deep_dives/i18n',
-                        //         ['https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox', 'Deployment'],
-                        //         'deep_dives/update',
-                        //         'deep_dives/npm-scripts',
-                        //         'deep_dives/vuex',
-                        //     ],
-                        // },
                     ],
                 },
             },
         },
     },
+    plugins: ['mermaidjs']
 };

@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/vuesion/docs#readme",
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-mermaidjs": "^1.9.1"
   }
 }
