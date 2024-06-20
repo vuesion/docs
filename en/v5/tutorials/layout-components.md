@@ -7,7 +7,7 @@ The Box component creates spacings around components and provides positioning op
 Tip: To make components more reusable, avoid adding outer spacings directly to them; instead, 
 wrap them in a Box component.
 
-<img src="/v5/vue-box.png">
+<img :src="$withBase('/v5/vue-box.png')" alt="vue-box component">
 
 ```html
 <vue-box padding="16 24">
@@ -21,7 +21,7 @@ By default, components are equally distributed, but each column can have a speci
 Columns can be stacked, making them ideal for creating forms or general layouts. 
 Tip: Columns don't provide vertical space, so pair them with the Stack component.
 
-<img src="/v5/vue-columns.png">
+<img :src="$withBase('/v5/vue-columns.png')" alt="vue-columns component">
 
 ```html
 <vue-columns space="16" padding="16 24">
@@ -42,7 +42,7 @@ limiting the content width of a page or component.
 Inline provides both horizontal and vertical spacings between components, 
 displaying them with their inline width. It can be stacked and is excellent for creating a list of elements.
 
-<img src="/v5/vue-inline.png">
+<img :src="$withBase('/v5/vue-inline.png')" alt="vue-inline component">
 
 ```html
 <vue-inline space="8" padding="16 24">
@@ -61,7 +61,7 @@ Tip: It supports only 3 columns and has a fixed responsive behavior.
 ### [Stack](https://vuesion.herokuapp.com/storybook/?path=/story/foundation-layout--stack)
 Stack provides vertical spacings between components, displaying them with their original height.
 
-<img src="/v5/vue-stack.png">
+<img :src="$withBase('/v5/vue-stack.png')" alt="vue-stack component">
 
 ```html
 <vue-stack space="8" padding="16 24">
