@@ -155,6 +155,8 @@ to generate code based on templates, making it easier to maintain a consistent c
 
 For more information, visit the [Hygen website](https://www.hygen.io/).
 
+<img :src="$withBase('/v5/new-rest-api.gif')" alt="create a new rest-api with listing and details pages in seconds">
+
 #### Presentational Components
 Presentational components are responsible for how things look. They exclusively receive data and emit events. 
 The command `npm run new:component` creates a `component.vue` file along with a `component.stories.ts` file with
